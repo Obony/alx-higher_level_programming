@@ -1,5 +1,3 @@
 ##**PYTHON**
 
-0x00. Python - Hello, World
-
- - Hello world python tasks and solutions, using scripts and codes.
+Starting out on Python as my first high level language!
