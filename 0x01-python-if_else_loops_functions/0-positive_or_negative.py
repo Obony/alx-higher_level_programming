@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10, 10)
 if number == 0:
-	printf(f"{number:d} is zero")
+	print(f"{number:d} is zero")
 elif number > 0:
 	print(f"{number:d} is positive")
 else:
