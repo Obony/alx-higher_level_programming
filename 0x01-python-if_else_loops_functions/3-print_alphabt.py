@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-num = 97
-while num < 123:
-    print("{}".format(chr(num)), end="")
-    num = num + 1
+for i in range(ord('a'), ord('z') + 1):
+    if chr(i) != 'e' and chr(i) != 'q':
+        print('{:c}'.format(i), end='')
