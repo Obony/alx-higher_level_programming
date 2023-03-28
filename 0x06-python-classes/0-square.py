@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-#0-square.py
-#Faith Nyaberi <faithnyabz69@gmail.com>
+"""This class declares a square"""
 
-"""Define a class Square"""
 
 class Square:
-    """Represent a Square"""
+    """Declares square"""
     pass
