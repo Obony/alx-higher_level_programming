@@ -4,9 +4,9 @@
 
 class Rectangle:
     """Represents rectangle"""
-    number_of_instances = 0 # class attribute to keep track of number of instances
-    print_symbol = "#"
 
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -16,7 +16,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1  # incrementing the class attribute
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -93,4 +93,4 @@ class Rectangle:
             printing a message with instance is deleted
         '''
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1  # decrementing the class attribute
+        Rectangle.number_of_instances -= 1
