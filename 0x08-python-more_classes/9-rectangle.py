@@ -7,6 +7,7 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
+    square_rect = Rectangle.square()
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -17,6 +18,7 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
+        square_rect = Rectangle.square()
 
     @property
     def height(self):
@@ -117,4 +119,4 @@ class Rectangle:
         Args:
             size (int): The width and height of the new Rectangle.
         """
-        return (cls(size, size))
+        return Rectangle.square(size, size)
