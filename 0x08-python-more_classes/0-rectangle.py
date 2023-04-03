@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# 0-rectangle.py
-# Faith Nyaberi <faithnyabz69@gmail.com>
-
+'''Defines a rectangle'''
 class Rectangle:
-    '''Represent a rectangle'''
+    '''My empty rectangle'''
     pass
