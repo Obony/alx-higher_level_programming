@@ -21,6 +21,10 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """
+            Checking for TypeError and ValueError
+            then setting up the private var
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -34,6 +38,10 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """
+            Checking for TypeError and ValueError
+            then setting up the private var
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
