@@ -71,13 +71,14 @@ class Rectangle:
         '''
             returning the string representation of the rectangle
         '''
+        symbol = str(self.print_symbol)
         rectangle = ""
         if self.height == 0 or self.width == 0:
             return rectangle
 
         for h in range(self.height - 1):
-            rectangle += "#" * self.width + "\n"
-        rectangle += "#" * self.width
+            rectangle += symbol * self.width + "\n"
+        rectangle += symbol * self.width
         return rectangle
 
     def __repr__(self):
