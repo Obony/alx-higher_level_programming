@@ -113,7 +113,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        '''
+        """
             Creates a Rectangle instance where width and height are size
-        '''
+        """
         return cls(size, size)
