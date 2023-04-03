@@ -81,14 +81,6 @@ class Rectangle:
         rectangle += symbol * self.width
         return rectangle
 
-     @classmethod
-    def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return (cls(size, size))
-
     def __repr__(self):
         '''
             creating a recreation of the instance call
@@ -118,3 +110,10 @@ class Rectangle:
             return rect_2
         elif rect_1.area() >= rect_2.area():
             return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        '''
+            Creates a Rectangle instance where width and height are size
+        '''
+        return cls(size, size)
