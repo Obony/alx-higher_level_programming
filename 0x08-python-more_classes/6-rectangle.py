@@ -77,16 +77,10 @@ class Rectangle:
         return rectangle
 
     def __repr__(self):
-        '''
-            creating a recreation of the instance call
-        '''
-        rep = "{}({}, {})".format(self.__class__.__name__,
-                                  self.width, self.height)
-        return rep
+        """returns a string representation of the rectangle"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        '''
-            printing a message with instance is deleted
-        '''
+        """prints a message for every object that is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
