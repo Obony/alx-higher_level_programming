@@ -7,7 +7,6 @@ class Rectangle:
 
     number_of_instances = 0
     print_symbol = "#"
-    square_rect = Rectangle.square()
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -18,7 +17,6 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
-        square_rect = Rectangle.square()
 
     @property
     def height(self):
@@ -115,8 +113,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return Rectangle.square(size, size)
+        '''creating new rectangle instance'''
+        return cls(size, size)
