@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-# 0-square.py by Faith Nyaberi
-"""A module that defines a square """
+"""My square declaration"""
 
 
 class Square:
-    """A class that represents a square"""
+    """My square class introduction"""
 
     def __init__(self, size=0):
-        """Initializing this square class
+        """Initializing my square class
         Args:
-            size: represnets the size of the square defined
+            size: size of my square
         Raises:
             TypeError: if size is not integer
             ValueError: if size is less than zero
@@ -38,7 +37,7 @@ class Square:
 
     def area(self):
         """
-        Calculate area of the square
+        Calculate area of my square
         Returns: The square of the size
         """
 
