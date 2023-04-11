@@ -21,10 +21,10 @@ class BaseGeometry:
 
 
     class Rectangle(BaseGeometry):
-    """ Rectangle is Sub Class of BaseGeometry """
+    """Rectangle is derived or Sub Class of BaseGeometry"""
 
     def __init__(self, width, height):
-        """ Initializes data for the rectangle class """
+        """Initializes data for the rectangle class"""
 
         BaseGeometry.integer_validator(self, "width", width)
         self.__width = width
