@@ -5,7 +5,6 @@ def inherits_from(obj, a_class):
         (directly or indirectly) from the specified class ; otherwise False
     '''
 
-    relatives = issubclass(obj.__class__, a_class)
-    not_relatives = (obj.__class__ is not a_class)
-
-    return (relatives and not_relatives)
+    if issubclass(obj.__class__, a_class) and obj.__class__ != a_class:
+        return True
+    return False
