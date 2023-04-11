@@ -20,7 +20,7 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
-    class Rectangle(BaseGeometry):
+class Rectangle(BaseGeometry):
     """Rectangle is derived or Sub Class of BaseGeometry"""
 
     def __init__(self, width, height):
