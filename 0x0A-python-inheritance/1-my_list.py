@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""this is a subclass."""
+""" MyList Module """
 
 
 class MyList(list):
-    """subclass inherited from list class."""
+    """ MyList Class """
+
+    def ___init__(self):
+        """ Initiates MyList class """
+        super().__init__()
 
     def print_sorted(self):
-        """Prints list in sorted ascending order."""
+        """ Prints a list in ascending order """
         print(sorted(self))
