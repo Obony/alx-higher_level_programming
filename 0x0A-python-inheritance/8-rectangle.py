@@ -21,7 +21,7 @@ class BaseGeometry:
 
 
     class Rectangle(BaseGeometry):
-    """ Rectangle is a Derived or Sub Class of BaseGeometry """
+    """ Rectangle is Sub Class of BaseGeometry """
 
     def __init__(self, width, height):
         """ Initializes data for the rectangle class """
