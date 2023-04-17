@@ -92,7 +92,7 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
-    
+
     def update(self, *args, **kwargs):
         """Update the Rectangle.
 
