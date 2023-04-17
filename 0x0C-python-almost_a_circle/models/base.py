@@ -5,6 +5,7 @@ import csv
 import turtle
 import os
 
+
 class Base:
     """Represent the base model.
 
