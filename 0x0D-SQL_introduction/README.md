@@ -4,7 +4,7 @@ I am working with SQL and Relational
 databases, practicing introductory data definition and data
 manipulation language, making subqueries, and using functions.Thanks to my Data Analytics knowledge, I had prior.
 
-## Usage :lioness:
+## Usage :Lion:
 
 * Scripts [3-list_tables.sql](./3-list_tables.sql) forward take the database to query
 from as a MySQL command line argument.
