@@ -3,8 +3,7 @@ class Square extends require('./4-rectangle.js') {
   constructor (size) {
     super(size, size);
   }
-
-  charPrint (c) {
+  charPrint(c) {
     if (c === undefined) {
       c = 'X';
     }
