@@ -4,8 +4,8 @@ class Square extends require('./4-rectangle.js') {
     super(size, size);
   }
   charPrint(c) {
-    if (typeof(c) === 'undefined') {
-      c = 'X';
+    if (c === undefined) {
+      this.print();
     }
     for (let i = 0; i < this.height; i++) {
       let xRow = '';
