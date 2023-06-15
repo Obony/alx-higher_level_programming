@@ -4,10 +4,6 @@ It is getting more fun with the
 aspects of the JavaScript language - scope, closures and `this`, working with
 objects and ES6-style classes.
 
-## Tests :dolphin:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
-
 ## Function Prototypes :floppy_disk:
 
 Prototypes for functions written in this project:
