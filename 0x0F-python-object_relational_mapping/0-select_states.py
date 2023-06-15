@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
+"""
+Listing all states from the database hbtn_0e_0_usa
+"""
 
 
-def list_states(username, password, db_name):
-    '''
-        Listing all states in hbtn_0e_0_usa database
-        in ascending order by id's.
-    '''
-    db = MySQLdb.connect(host="localhost",
-                         user=username,
-                         passwd=password,
-                         db=db_name,
-                         port=3306)
+def main():
+    """
+    List 'states' table of 'hbtn_0e_0_usa' database in ascending
+    order by id's
+    """
+    import MySQLdb
+    from sys import argv
 
+    db = MySQLdb.connect(host='localhost', port=3306,
+                         user=argv[1], passwd=argv[2], db=argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM `states` ORDER BY id ASC")
+
+    cursor.execute("SELECT * FROM states ORDER BY id;")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
+
     cursor.close()
     db.close()
 
-if __name__ == "__main__":
-    credentials = sys.argv
-    username = sys.argv[1]
-    passwd = sys.argv[2]
-    db_name = sys.argv[3]
-    list_states(username, passwd, db_name)
+
+if __name__ == '__main__':
+    main()
