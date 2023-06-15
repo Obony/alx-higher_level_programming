@@ -4,11 +4,6 @@ Learning about how object-relational mapping is used for
 database scripting, using MySQLdb and SQLAlchemy to
 query, create, edit, and delete tables in MySQL.
 
-## Tests :dolphin:
-
-* [tests](./tests): Folder of SQL and Python scripts for setting up test tables
-for all files. Provided by Holberton School.
-
 ## Tasks :page_with_curl:
 
 * **0. Get all states**
