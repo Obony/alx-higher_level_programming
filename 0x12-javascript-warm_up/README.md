@@ -2,10 +2,6 @@
 
 This is my first Javascript project with introductory-level JavaScript scripts on Node.js.
 
-## Tests :dolphin:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
-
 ## Function Prototypes :floppy_disk:
 
 Prototypes for functions written in this project:
