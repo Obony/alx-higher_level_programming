@@ -12,8 +12,13 @@ def main():
     import MySQLdb
     from sys import argv
 
+    usr = str(argv[1])
+    pasw = str(argv[2])
+    db_name = str(argv[3])
+    state_name = str(argv[4])
+
     db = MySQLdb.connect(host='localhost', port=3306,
-                         user=argv[1], passwd=argv[2], db=argv[3])
+                         user=usr, passwd=pasw, db=db_name)
     cursor = db.cursor()
 
     query = cur.execute("SELECT * FROM states WHERE name LIKE ( %s );",
