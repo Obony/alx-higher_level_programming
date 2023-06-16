@@ -19,7 +19,8 @@ def main():
     cursor.execute("SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id;")
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        if ("N" in row[1]):
+            print(row)
 
     cursor.close()
     db.close()
