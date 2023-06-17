@@ -21,20 +21,17 @@ def main():
                          user=usr, passwd=pasw, db=db_name)
     cursor = db.cursor()
 
-    cursor.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR ', ')\
+    cursor.execute("SELECT cities.name\
                     FROM cities\
                     JOIN states\
                     ON cities.state_id=states.id\
-                    WHERE cities.state_id=states.id\
-                    AND states.name=%s\
-                    ORDER BY cities.id ASC;", (state_name, ))
+                    WHERE states.name = %s;", (state_name, ))
 
     rows = cursor.fetchall()
+    cities = []
     for row in rows:
-        if row[0] is not one:
-            print(row[0])
-        else:
-            print()
+        cities.append(str(row[0]))
+    print(', '.join(cities))
 
     cursor.close()
     db.close()
