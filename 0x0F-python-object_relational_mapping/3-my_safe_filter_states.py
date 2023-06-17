@@ -21,9 +21,8 @@ def main():
                          user=usr, passwd=pasw, db=db_name)
     cursor = db.cursor()
 
-    query = cur.execute("SELECT * FROM states WHERE name LIKE ( %s );",
-                (state_name, ))
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states WHERE name LIKE ( %s );",
+                   (state_name, ))
 
     rows = cursor.fetchall()
     for row in rows:
