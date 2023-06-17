@@ -1,22 +1,32 @@
 #!/usr/bin/python3
-# Lists all City objects from the database hbtn_0e_14_usa.
-# Usage: ./14-model_city_fetch_by_state.py <mysql username> /
-#                                          <mysql password> /
-#                                          <database name>
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from model_state import State
-from model_city import City
+"""
+This module lists all cities from a database
+"""
 
-if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+
+def main():
+    """
+    List all 'Cities' table objects in a given database
+    """
+    from sqlalchemy.orm import sessionmaker
+    from sqlalchemy import create_engine
+    from sys import argv
+
+    from model_state import Base, State
+    from model_city import City
+
+    connection = "mysql+mysqldb://{}:{}@localhost/{}".format(str(argv[1]),
+                                                      str(argv[2]),
+                                                      str(argv[3]))
+    engine = create_engine(connection)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for city, state in session.query(City, State) \
-                              .filter(City.state_id == State.id) \
-                              .order_by(City.id):
+    cities_by_states = session.query(City, State).\
+        filter(City.state_id == State.id).all()
+    for city, state in cities_by_states:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
+
+
+if __name__ == '__main__':
+    main()
