@@ -16,8 +16,8 @@ def main():
     from model_city import City
 
     connection = "mysql+mysqldb://{}:{}@localhost/{}".format(str(argv[1]),
-                                                      str(argv[2]),
-                                                      str(argv[3]))
+                                                             str(argv[2]),
+                                                             str(argv[3]))
     engine = create_engine(connection)
     Session = sessionmaker(bind=engine)
     session = Session()
