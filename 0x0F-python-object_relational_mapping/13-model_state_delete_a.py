@@ -21,9 +21,9 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter_by(State.name.like("%a%")).all()
-    for state in states:
-        session.delete(states)
+    query = session.query(State).filter(State.name.like("%a%")).all()
+    for row in query:
+        session.delete(row)
     session.commit()
 
 
