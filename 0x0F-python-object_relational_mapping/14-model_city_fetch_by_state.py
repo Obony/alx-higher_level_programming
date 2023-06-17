@@ -21,10 +21,10 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities_by_states = session.query(City, State).\
+    query = session.query(State, City).\
         filter(City.state_id == State.id).all()
-    for city, state in cities_by_states:
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    for row in query:
+        print("{}: ({}) {}".format(row[0].name, row[1].id, row[1].name))
 
 
 if __name__ == '__main__':
