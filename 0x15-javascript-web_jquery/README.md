@@ -1,3 +1,5 @@
+![jqueryLol](https://github.com/Obony/alx-higher_level_programming/assets/117737538/6f3686f7-208a-4a4d-9d7b-2a72867c3cf4)
+
 # JavaScript - Web jQuery
 - [x] Front-end
 - [x] JavaScript
