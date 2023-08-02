@@ -8,4 +8,4 @@ $('document').ready(function () {
     $('DIV#clear_list').click(function () {
       $('UL.my_list').empty();
     });
-  });
+});
